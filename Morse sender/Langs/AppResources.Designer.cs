@@ -97,7 +97,7 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please not that non standard alphabetical characters will not be translated into morse code.
+        ///   Looks up a localized string similar to Please note that non standard alphabetical characters will not be translated into morse code.
         /// </summary>
         public static string MsgBoxStart {
             get {

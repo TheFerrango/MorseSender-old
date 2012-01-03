@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Tasks;
 
 namespace Morse_sender
 {
@@ -33,6 +34,23 @@ namespace Morse_sender
     private void txtToMorsefy_TextChanged(object sender, TextChangedEventArgs e)
     {      
       lblMorsed.Text = MorseConverters.ConvertToMorse(txtToMorsefy.Text);
+    }
+
+    private void sndSMS_Click(object sender, EventArgs e)
+    {
+      
+    }
+
+    private void sndMail_Click(object sender, EventArgs e)
+    {
+      
+    }
+
+    private void postShare_Click(object sender, EventArgs e)
+    {
+      ShareStatusTask sst = new ShareStatusTask();
+      sst.Status = lblMorsed.Text;
+      sst.Show();
     }
   }
 }

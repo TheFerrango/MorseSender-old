@@ -7,22 +7,22 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <!--Pivot Control-->
+  <!--LayoutRoot is the root grid where all page content is placed-->
+  <Grid x:Name="LayoutRoot" Background="Transparent">
+    <!--Pivot Control-->
     <controls:Pivot Title="{Binding Path=LocalizedResources.AppName, Source={StaticResource Locales}}">
-            <!--Pivot item one-->
+      <!--Pivot item one-->
       <controls:PivotItem Header="{Binding Path=LocalizedResources.FirstPivot, Source={StaticResource Locales}}">
-                <!--Double line list with text wrapping-->
+        <!--Double line list with text wrapping-->
         <StackPanel>
-          <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Name="txtToMorsefy" Text="Your text here" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="txtToMorsefy_TextChanged" />
+          <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="txtToMorsefy" Text="Your text here" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="txtToMorsefy_TextChanged" />
           <Border Width="450" BorderThickness="1" BorderBrush="White" Margin="0,10,0,0" >
             <ScrollViewer>
               <TextBlock Name="lblMorsed" Text="Coop" FontSize="24" Margin="0,0,0,0"/>
@@ -30,25 +30,29 @@
           </Border>
         </StackPanel>
       </controls:PivotItem>
- 
-            <!--Pivot item two-->
-      <controls:PivotItem Header="{Binding Path=LocalizedResources.SecondPivot, Source={StaticResource Locales}}"> 
-                <!--Triple line list no text wrapping-->
-       
-            </controls:PivotItem>
-        </controls:Pivot>
+
+      <!--Pivot item two-->
+      <controls:PivotItem Header="{Binding Path=LocalizedResources.SecondPivot, Source={StaticResource Locales}}">
+        <!--Triple line list no text wrapping-->
+
+      </controls:PivotItem>
+      <controls:PivotItem Header="{Binding Path=LocalizedResources.ThirdPivot, Source={StaticResource Locales}}">
+        <!--Triple line list no text wrapping-->
+
+      </controls:PivotItem>
+    </controls:Pivot>
   </Grid>
- 
-    <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+
+  <!--Sample code showing usage of ApplicationBar-->
+ <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Send via mail" x:Name="sndMail" Click="sndMail_Click"/>
+                <shell:ApplicationBarMenuItem Text="Send via SMS" x:Name="sndSMS" Click="sndSMS_Click"/>
+                <shell:ApplicationBarMenuItem Text="Share on socials" x:Name="postShare" Click="postShare_Click"/>
+
+      </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

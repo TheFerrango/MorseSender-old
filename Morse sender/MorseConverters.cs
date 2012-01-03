@@ -61,7 +61,7 @@ namespace Morse_sender
         default: morseChar = ""; break;
       } 
       
-      return morseChar;
+      return morseChar + " ";
 
     }
 

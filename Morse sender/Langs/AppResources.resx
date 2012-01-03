@@ -139,6 +139,6 @@
     <value />
   </data>
   <data name="MsgBoxStart" xml:space="preserve">
-    <value>Please not that non standard alphabetical characters will not be translated into morse code</value>
+    <value>Please note that non standard alphabetical characters will not be translated into morse code</value>
   </data>
 </root>
