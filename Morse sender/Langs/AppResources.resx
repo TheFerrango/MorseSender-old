@@ -127,7 +127,7 @@
     <value>Mail morse</value>
   </data>
   <data name="SecondPivot" xml:space="preserve">
-    <value>Morse2Pivot</value>
+    <value>Morse2Text</value>
   </data>
   <data name="SmsMorse" xml:space="preserve">
     <value>Text morse</value>
@@ -136,9 +136,15 @@
     <value>About</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value />
+    <value>Translate your text into morse code and back! Note that morse letters are separeted by white spaces ' ' and morse words are separeted by slashes '/'</value>
   </data>
   <data name="MsgBoxStart" xml:space="preserve">
     <value>Please note that non standard alphabetical characters will not be translated into morse code</value>
+  </data>
+  <data name="MorseCode" xml:space="preserve">
+    <value>-.-- --- ..- .-. / -- --- .-. ... . / .... . .-. .</value>
+  </data>
+  <data name="TextCode" xml:space="preserve">
+    <value>Your text here</value>
   </data>
 </root>

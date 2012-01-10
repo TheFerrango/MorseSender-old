@@ -21,11 +21,11 @@
       <!--Pivot item one-->
       <controls:PivotItem Header="{Binding Path=LocalizedResources.FirstPivot, Source={StaticResource Locales}}">
         <!--Double line list with text wrapping-->
-        <StackPanel>
-          <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="txtToMorsefy" Text="Your text here" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="txtToMorsefy_TextChanged" />
+        <StackPanel GotFocus="StackPanel_GotFocus">
+          <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="txtToMorsefy" Text="{Binding Path=LocalizedResources.TextCode, Source={StaticResource Locales}}" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="txtToMorsefy_TextChanged" MaxHeight="236" />
           <Border Width="450" BorderThickness="1" BorderBrush="White" Margin="0,10,0,0" >
             <ScrollViewer>
-              <TextBlock Name="lblMorsed" Text="Coop" FontSize="24" Margin="0,0,0,0"/>
+              <TextBlock Name="lblMorsed" Text="Coop" FontSize="24" Margin="0,0,0,0" TextWrapping="Wrap" />
             </ScrollViewer>
           </Border>
         </StackPanel>
@@ -34,25 +34,39 @@
       <!--Pivot item two-->
       <controls:PivotItem Header="{Binding Path=LocalizedResources.SecondPivot, Source={StaticResource Locales}}">
         <!--Triple line list no text wrapping-->
-
+<StackPanel>
+          <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="morseToTextfy" Text="{Binding Path=LocalizedResources.MorseCode, Source={StaticResource Locales}}" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="morseToTextfy_TextChanged" GotFocus="morseToTextfy_GotFocus" MaxHeight="236" />
+          <Border Width="450" BorderThickness="1" BorderBrush="White" Margin="0,10,0,0" >
+            <ScrollViewer>
+              <TextBlock Name="lblTexted" Text="Coop" FontSize="24" Margin="0,0,0,0" TextWrapping="Wrap" MaxHeight="252" />
+            </ScrollViewer>
+          </Border>
+        </StackPanel>
       </controls:PivotItem>
       <controls:PivotItem Header="{Binding Path=LocalizedResources.ThirdPivot, Source={StaticResource Locales}}">
         <!--Triple line list no text wrapping-->
+        <StackPanel >
+          <TextBlock  HorizontalAlignment="Left" Margin="0,0,0,0" Name="textBlock1" Text="{Binding Path=LocalizedResources.AppName, Source={StaticResource Locales}}" VerticalAlignment="Top" FontSize="32" />
+          <TextBlock Margin="0,0,0,0" Name="textBlock2" Text="{Binding Path=LocalizedResources.AboutText, Source={StaticResource Locales}}" TextWrapping="Wrap"/>
+          <TextBlock Margin="0,0,0,0" Name="textBlock3" Text=" " />
+          <TextBlock Margin="0,0,0,0" Name="textBlock4" Text="Version 1.0" />
 
+
+        </StackPanel>
       </controls:PivotItem>
     </controls:Pivot>
   </Grid>
 
   <!--Sample code showing usage of ApplicationBar-->
- <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Send via mail" x:Name="sndMail" Click="sndMail_Click"/>
-                <shell:ApplicationBarMenuItem Text="Send via SMS" x:Name="sndSMS" Click="sndSMS_Click"/>
-                <shell:ApplicationBarMenuItem Text="Share on socials" x:Name="postShare" Click="postShare_Click"/>
-
+  <phone:PhoneApplicationPage.ApplicationBar>
+    <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+      <shell:ApplicationBar.MenuItems>
+        <shell:ApplicationBarMenuItem Text="Send via SMS" x:Name="sndSMS" Click="sndSMS_Click"/>
+        <shell:ApplicationBarMenuItem Text="Send via mail" x:Name="sndMail" Click="sndMail_Click"/>
+        <shell:ApplicationBarMenuItem Text="Share on socials" x:Name="postShare" Click="postShare_Click"/>
+        <shell:ApplicationBarMenuItem Text="Copy morse to clipboard" x:Name="saveClip" Click="saveClip_Click"/>
       </shell:ApplicationBar.MenuItems>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    </shell:ApplicationBar>
+  </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

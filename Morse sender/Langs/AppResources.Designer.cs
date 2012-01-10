@@ -61,7 +61,7 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Translate your text into morse code and back! Note that morse letters are separeted by white spaces &apos; &apos; and morse words are separeted by slashes &apos;/&apos;.
         /// </summary>
         public static string AboutText {
             get {
@@ -97,6 +97,15 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -.-- --- ..- .-. / -- --- .-. ... . / .... . .-. ..
+        /// </summary>
+        public static string MorseCode {
+            get {
+                return ResourceManager.GetString("MorseCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please note that non standard alphabetical characters will not be translated into morse code.
         /// </summary>
         public static string MsgBoxStart {
@@ -106,7 +115,7 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Morse2Pivot.
+        ///   Looks up a localized string similar to Morse2Text.
         /// </summary>
         public static string SecondPivot {
             get {
@@ -120,6 +129,15 @@ namespace Morse_sender.Langs {
         public static string SmsMorse {
             get {
                 return ResourceManager.GetString("SmsMorse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your text here.
+        /// </summary>
+        public static string TextCode {
+            get {
+                return ResourceManager.GetString("TextCode", resourceCulture);
             }
         }
         
