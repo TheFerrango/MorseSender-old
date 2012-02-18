@@ -24,7 +24,7 @@
         <StackPanel GotFocus="StackPanel_GotFocus">
           <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="txtToMorsefy" Text="{Binding Path=LocalizedResources.TextCode, Source={StaticResource Locales}}" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="txtToMorsefy_TextChanged" MaxHeight="236" />
           <Border Width="450" BorderThickness="1" BorderBrush="White" Margin="0,10,0,0" >
-            <ScrollViewer>
+            <ScrollViewer MaxHeight="240">
               <TextBlock Name="lblMorsed" Text="Coop" FontSize="24" Margin="0,0,0,0" TextWrapping="Wrap" />
             </ScrollViewer>
           </Border>
@@ -37,8 +37,8 @@
 <StackPanel>
           <TextBox HorizontalAlignment="Left" InputScope="Text" Margin="0,0,0,0" Name="morseToTextfy" Text="{Binding Path=LocalizedResources.MorseCode, Source={StaticResource Locales}}" VerticalAlignment="Top" Width="460" TextWrapping="Wrap" AcceptsReturn="True" FontSize="26" TextChanged="morseToTextfy_TextChanged" GotFocus="morseToTextfy_GotFocus" MaxHeight="236" />
           <Border Width="450" BorderThickness="1" BorderBrush="White" Margin="0,10,0,0" >
-            <ScrollViewer>
-              <TextBlock Name="lblTexted" Text="Coop" FontSize="24" Margin="0,0,0,0" TextWrapping="Wrap" MaxHeight="252" />
+            <ScrollViewer MaxHeight="240">
+              <TextBlock Name="lblTexted" Text="Coop" FontSize="24" Margin="0,0,0,0" TextWrapping="Wrap"/>
             </ScrollViewer>
           </Border>
         </StackPanel>
