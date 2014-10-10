@@ -5,6 +5,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
@@ -14,7 +15,28 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
+  <toolkit:TransitionService.NavigationInTransition>
+    <toolkit:NavigationInTransition>
+      <toolkit:NavigationInTransition.Backward>
+        <toolkit:TurnstileTransition Mode="BackwardIn" />
+      </toolkit:NavigationInTransition.Backward>
+      <toolkit:NavigationInTransition.Forward>
+        <toolkit:TurnstileTransition Mode="ForwardIn" />
+      </toolkit:NavigationInTransition.Forward>
+    </toolkit:NavigationInTransition>
+  </toolkit:TransitionService.NavigationInTransition>
+  <toolkit:TransitionService.NavigationOutTransition>
+    <toolkit:NavigationOutTransition>
+      <toolkit:NavigationOutTransition.Backward>
+        <toolkit:TurnstileTransition Mode="BackwardOut" />
+      </toolkit:NavigationOutTransition.Backward>
+      <toolkit:NavigationOutTransition.Forward>
+        <toolkit:TurnstileTransition Mode="ForwardOut" />
+      </toolkit:NavigationOutTransition.Forward>
+    </toolkit:NavigationOutTransition>
+  </toolkit:TransitionService.NavigationOutTransition>
+
+  <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--Pivot Control-->
         <controls:Pivot Title="{Binding Path=LocalizedResources.AppName, Source={StaticResource Locales}}">
@@ -56,11 +78,16 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Send via SMS" x:Name="sndSMS" Click="sndSMS_Click"/>
-                <shell:ApplicationBarMenuItem Text="Send via mail" x:Name="sndMail" Click="sndMail_Click"/>
-                <shell:ApplicationBarMenuItem Text="Share on socials" x:Name="postShare" Click="postShare_Click"/>
-                <shell:ApplicationBarMenuItem Text="Copy morse to clipboard" x:Name="saveClip" Click="saveClip_Click"/>
+      <shell:ApplicationBar.Buttons>
+        <shell:ApplicationBarIconButton IconUri="/Images/play.png" Text="play" />
+        <shell:ApplicationBarIconButton IconUri="/Images/share.png" Text="share" />
+      </shell:ApplicationBar.Buttons>
+        
+      
+        <shell:ApplicationBar.MenuItems>
+        
+        <!--<shell:ApplicationBarMenuItem Text="settings" x:Name="settBtn" Click="settBtn_Click"/>-->
+                <shell:ApplicationBarMenuItem Text="about" x:Name="aboBtn" Click="aboBtn_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

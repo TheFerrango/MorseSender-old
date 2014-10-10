@@ -79,6 +79,15 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to dit dit dah dit - dit dit dah - dah dit.
+        /// </summary>
+        public static string AppMotto {
+            get {
+                return ResourceManager.GetString("AppMotto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Morse sender.
         /// </summary>
         public static string AppName {

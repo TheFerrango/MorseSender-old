@@ -16,19 +16,25 @@ namespace Morse_sender
 {
   public partial class MainPage : PhoneApplicationPage
   {
+    bool loaded;
     bool toMorse;
     // Constructor
     public MainPage()
     {
       InitializeComponent();
+      loaded = false;
     }
 
     private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
     {
-      MessageBox.Show(Langs.AppResources.MsgBoxStart);
-      toMorse = true;
-      radioT2m.IsChecked = true;
-      txtToMorsefy_TextChanged(null, null);
+      if (!loaded)
+      {
+        MessageBox.Show(Langs.AppResources.MsgBoxStart);
+        toMorse = true;
+        radioT2m.IsChecked = true;
+        txtToMorsefy_TextChanged(null, null);
+        loaded = true;
+      }
     } 
 
     private void txtToMorsefy_TextChanged(object sender, TextChangedEventArgs e)
@@ -71,6 +77,16 @@ namespace Morse_sender
     {
       toMorse = radioT2m.IsChecked == true? true : false;
       txtToMorsefy_TextChanged(null, null);
+    }
+
+    private void settBtn_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void aboBtn_Click(object sender, EventArgs e)
+    {
+      NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
     }
 
       

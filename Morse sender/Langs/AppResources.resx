@@ -153,4 +153,7 @@
   <data name="SecondPivot" xml:space="preserve">
     <value>output</value>
   </data>
+  <data name="AppMotto" xml:space="preserve">
+    <value>dit dit dah dit - dit dit dah - dah dit</value>
+  </data>
 </root>
