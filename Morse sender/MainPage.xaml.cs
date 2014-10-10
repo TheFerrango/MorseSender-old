@@ -16,24 +16,24 @@ namespace Morse_sender
 {
   public partial class MainPage : PhoneApplicationPage
   {
+    bool toMorse;
     // Constructor
     public MainPage()
     {
       InitializeComponent();
-
-      // Set the data context of the listbox control to the sample data
-      this.Loaded += new RoutedEventHandler(MainPage_Loaded);
     }
 
-    // Load data for the ViewModel Items
-    private void MainPage_Loaded(object sender, RoutedEventArgs e)
+    private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
     {
       MessageBox.Show(Langs.AppResources.MsgBoxStart);
-    }
+      toMorse = true;
+      radioT2m.IsChecked = true;
+      txtToMorsefy_TextChanged(null, null);
+    } 
 
     private void txtToMorsefy_TextChanged(object sender, TextChangedEventArgs e)
-    {      
-      lblMorsed.Text = MorseConverters.ConvertToMorse(txtToMorsefy.Text);
+    {
+      lblMorsed.Text = toMorse ? MorseConverters.ConvertToMorse(txtToMorsefy.Text) : MorseConverters.ConvertToText(txtToMorsefy.Text);
     }
 
     private void sndSMS_Click(object sender, EventArgs e)
@@ -60,21 +60,19 @@ namespace Morse_sender
     private void saveClip_Click(object sender, EventArgs e)
     {
       Clipboard.SetText(lblMorsed.Text);
-    }
-
-    private void morseToTextfy_TextChanged(object sender, TextChangedEventArgs e)
-    {
-      lblTexted.Text = MorseConverters.ConvertToText(morseToTextfy.Text);
-    }
+    }    
 
     private void StackPanel_GotFocus(object sender, RoutedEventArgs e)
     {
       txtToMorsefy.SelectAll();
     }
 
-    private void morseToTextfy_GotFocus(object sender, RoutedEventArgs e)
+    private void radioT2m_Tap(object sender, System.Windows.Input.GestureEventArgs e)
     {
-      morseToTextfy.SelectAll();
+      toMorse = radioT2m.IsChecked == true? true : false;
+      txtToMorsefy_TextChanged(null, null);
     }
+
+      
   }
 }

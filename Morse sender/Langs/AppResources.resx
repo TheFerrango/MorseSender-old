@@ -120,20 +120,20 @@
   <data name="AppName" xml:space="preserve">
     <value>Morse sender</value>
   </data>
-  <data name="FirstPivot" xml:space="preserve">
-    <value>Text2Morse</value>
+  <data name="t2m" xml:space="preserve">
+    <value>Text to Morse</value>
   </data>
   <data name="MailMorse" xml:space="preserve">
-    <value>Mail morse</value>
+    <value>mail morse</value>
   </data>
-  <data name="SecondPivot" xml:space="preserve">
-    <value>Morse2Text</value>
+  <data name="m2t" xml:space="preserve">
+    <value>Morse to Text</value>
   </data>
   <data name="SmsMorse" xml:space="preserve">
-    <value>Text morse</value>
+    <value>text morse</value>
   </data>
-  <data name="ThirdPivot" xml:space="preserve">
-    <value>About</value>
+  <data name="AboutTit" xml:space="preserve">
+    <value>About morse sender</value>
   </data>
   <data name="AboutText" xml:space="preserve">
     <value>Translate your text into morse code and back! Note that morse letters are separeted by white spaces ' ' and morse words are separeted by slashes '/'</value>
@@ -146,5 +146,11 @@
   </data>
   <data name="TextCode" xml:space="preserve">
     <value>Your text here</value>
+  </data>
+  <data name="FirstPivot" xml:space="preserve">
+    <value>input</value>
+  </data>
+  <data name="SecondPivot" xml:space="preserve">
+    <value>output</value>
   </data>
 </root>
