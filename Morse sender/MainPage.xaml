@@ -39,23 +39,6 @@
 
   <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-    <MediaElement 
-    x:Name="dot" 
-    Source="sound/dot.wav" MediaEnded="dot_MediaEnded"
-    AutoPlay="False" />
-    <MediaElement 
-    x:Name="dash" 
-    Source="sound/dash.wav" 
-            MediaEnded="dot_MediaEnded"
-    AutoPlay="False" />
-    <MediaElement 
-    x:Name="smpause" 
-    Source="sound/smpause.wav" MediaEnded="dot_MediaEnded"
-    AutoPlay="False" />
-    <MediaElement 
-    x:Name="lgpause" 
-    Source="sound/lgpause.wav" MediaEnded="dot_MediaEnded"
-    AutoPlay="False" />
 
     <!--Pivot Control-->
         <controls:Pivot Title="{Binding Path=LocalizedResources.AppName, Source={StaticResource Locales}}">

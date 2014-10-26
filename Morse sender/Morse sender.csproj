@@ -58,6 +58,7 @@
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -113,6 +114,8 @@
     <Content Include="Images\banner.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\share.png" />
+    <Content Include="NAudio.dll" />
+    <Content Include="NAudio.WindowsMediaFormat.dll" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Sound\dash.wav" />
     <Content Include="Sound\dot.wav" />
