@@ -15,6 +15,7 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
+  
   <toolkit:TransitionService.NavigationInTransition>
     <toolkit:NavigationInTransition>
       <toolkit:NavigationInTransition.Backward>
@@ -38,7 +39,25 @@
 
   <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <!--Pivot Control-->
+    <MediaElement 
+    x:Name="dot" 
+    Source="sound/dot.wav" MediaEnded="dot_MediaEnded"
+    AutoPlay="False" />
+    <MediaElement 
+    x:Name="dash" 
+    Source="sound/dash.wav" 
+            MediaEnded="dot_MediaEnded"
+    AutoPlay="False" />
+    <MediaElement 
+    x:Name="smpause" 
+    Source="sound/smpause.wav" MediaEnded="dot_MediaEnded"
+    AutoPlay="False" />
+    <MediaElement 
+    x:Name="lgpause" 
+    Source="sound/lgpause.wav" MediaEnded="dot_MediaEnded"
+    AutoPlay="False" />
+
+    <!--Pivot Control-->
         <controls:Pivot Title="{Binding Path=LocalizedResources.AppName, Source={StaticResource Locales}}">
             <!--Pivot item one-->
             <controls:PivotItem Header="{Binding Path=LocalizedResources.FirstPivot, Source={StaticResource Locales}}">
@@ -79,15 +98,16 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
       <shell:ApplicationBar.Buttons>
-        <shell:ApplicationBarIconButton IconUri="/Images/play.png" Text="play" />
-        <shell:ApplicationBarIconButton IconUri="/Images/share.png" Text="share" />
+        <shell:ApplicationBarIconButton IconUri="/Images/play.png" Text="play" x:Name="playBtn" Click="playBtn_Click" />
+        <shell:ApplicationBarIconButton IconUri="/Images/share.png" Text="share" x:Name="shareBtn" />
       </shell:ApplicationBar.Buttons>
         
       
         <shell:ApplicationBar.MenuItems>
         
         <!--<shell:ApplicationBarMenuItem Text="settings" x:Name="settBtn" Click="settBtn_Click"/>-->
-                <shell:ApplicationBarMenuItem Text="about" x:Name="aboBtn" Click="aboBtn_Click"/>
+        <shell:ApplicationBarMenuItem Text="about" x:Name="aboBtn" Click="aboBtn_Click"/>
+        
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

@@ -16,6 +16,8 @@ namespace Morse_sender
 {
   public partial class MainPage : PhoneApplicationPage
   {
+    int posMorse = 0;
+    bool isPlaying = false;
     bool loaded;
     bool toMorse;
     // Constructor
@@ -89,6 +91,39 @@ namespace Morse_sender
       NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
     }
 
+    private void playBtn_Click(object sender, EventArgs e)
+    {
+      if (!isPlaying)
+      {
+        posMorse = 0;
+        isPlaying = true;
+        riproduci();
+      }
+    }
+
+    void dot_MediaEnded(object sender, RoutedEventArgs e)
+    {
+      posMorse++;
+      riproduci();
+    }
+
+    private void riproduci()
+    {
+      if (posMorse < lblMorsed.Text.Length)
+      {
+        
+        switch (lblMorsed.Text[posMorse])
+        {
+          case '.':  dot.Play(); break;
+          case '-':  dash.Play(); break;
+          case ' ':  smpause.Play(); break;
+          case '/':  lgpause.Play(); break;
+          default: break;
+        }
+      }
+      else
+        isPlaying = false;
+    }
       
   }
 }

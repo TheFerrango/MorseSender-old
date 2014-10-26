@@ -114,6 +114,14 @@
     <Content Include="Images\play.png" />
     <Content Include="Images\share.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="Sound\dash.mp3" />
+    <Content Include="Sound\dash.wav" />
+    <Content Include="Sound\dot.mp3" />
+    <Content Include="Sound\dot.wav" />
+    <Content Include="Sound\lgpause.mp3" />
+    <Content Include="Sound\lgpause.wav" />
+    <Content Include="Sound\smpause.mp3" />
+    <Content Include="Sound\smpause.wav" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
