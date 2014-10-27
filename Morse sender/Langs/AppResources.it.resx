@@ -121,51 +121,51 @@
     <value>Morse sender</value>
   </data>
   <data name="t2m" xml:space="preserve">
-    <value>Text to Morse</value>
+    <value>Testo -&gt; Morse</value>
   </data>
   <data name="m2t" xml:space="preserve">
-    <value>Morse to Text</value>
+    <value>Morse -&gt; Testo</value>
   </data>
   <data name="AboutTit" xml:space="preserve">
-    <value>About morse sender</value>
+    <value>Informazioni su Morse sender</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>Translate your text into morse code and back! Note that morse letters are separeted by white spaces ' ' and morse words are separeted by slashes '/'</value>
+    <value>Traduci i tuoi messaggi in codice morse e viceversa! Ricorda che le lettere morse sono separate da spazi ' ' e le parole morse sono separate da barre '/'</value>
   </data>
   <data name="MsgBoxStart" xml:space="preserve">
-    <value>Please note that non standard alphabetical characters will not be translated into morse code</value>
+    <value>Si noti che i caratteri alfabetici non standard non verranno convertiti in codice morse</value>
   </data>
   <data name="TextCode" xml:space="preserve">
-    <value>Your text here</value>
+    <value>Il tuo messaggio qui</value>
   </data>
   <data name="FirstPivot" xml:space="preserve">
-    <value>message</value>
+    <value>messaggio</value>
   </data>
   <data name="SecondPivot" xml:space="preserve">
-    <value>translation</value>
+    <value>traduzione</value>
   </data>
   <data name="AppMotto" xml:space="preserve">
     <value>dit dit dah dit - dit dit dah - dah dit</value>
   </data>
   <data name="MailSub" xml:space="preserve">
-    <value>Morse message</value>
+    <value>Messaggio Morse</value>
   </data>
   <data name="PlayErrTit" xml:space="preserve">
-    <value>Unable to play</value>
+    <value>Impossibile riprodurre</value>
   </data>
   <data name="PlayErrTxt" xml:space="preserve">
-    <value>You can only play morse code. Please select 'Text to Morse' mode and try again</value>
+    <value>È possibile riprodurre solo codice morse. Selezionare la modalità 'Da testo a morse' e riprovare</value>
   </data>
   <data name="SentFrom" xml:space="preserve">
-    <value>Sent from Morse sender for Windows Phone</value>
+    <value>Inviato tramite Morse sender per Windows Phone</value>
   </data>
   <data name="ShareText" xml:space="preserve">
-    <value>Share via:</value>
-  </data>
-  <data name="ContactMe" xml:space="preserve">
-    <value>If you have comments or suggestions, please feel free to contact me at the following address:</value>
+    <value>Condividi tramite:</value>
   </data>
   <data name="ThirdParty" xml:space="preserve">
-    <value>This application makes use of Coding4Fun's Controls library</value>
+    <value>Questa applicazione fa uso della libreria Controlli di Coding4Fun </value>
+  </data>
+  <data name="ContactMe" xml:space="preserve">
+    <value>Se hai commenti o suggerimenti, non esitare a contattarmi al seguente indirizzo:</value>
   </data>
 </root>

@@ -45,11 +45,17 @@
 
         <Image Source="/Images/banner.png" Height="150" />
         <TextBlock Margin="0,0,0,0"  Text="{Binding Path=LocalizedResources.AppMotto, Source={StaticResource Locales}}" TextWrapping="Wrap" FontSize="26" FontWeight="Bold" TextAlignment="Center" />
+              
 
 
         <TextBlock Margin="0,40,0,0"  Text="{Binding Path=LocalizedResources.AboutText, Source={StaticResource Locales}}" TextWrapping="Wrap"/>
-                
-                <TextBlock Margin="0,20,0,0"  Text="Version 2.0" />
+
+        <TextBlock Margin="0,40,0,0"  Text="{Binding Path=LocalizedResources.ThirdParty, Source={StaticResource Locales}}" TextWrapping="Wrap"/>
+        <TextBlock Margin="0,40,0,0"  Text="{Binding Path=LocalizedResources.ContactMe, Source={StaticResource Locales}}" TextWrapping="Wrap"/>
+        <TextBlock Foreground="#FF22B14C" Text="theferrango@outlook.com" Tap="TextBlock_Tap" TextWrapping="Wrap"/>
+
+
+        <TextBlock Margin="0,20,0,0"  Text="Version 2.0" />
             </StackPanel>
         </Grid>
     </Grid>

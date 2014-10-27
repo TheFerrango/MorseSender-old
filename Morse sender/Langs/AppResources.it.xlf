@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="it" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Morse sender" product-version="2.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1085.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/AppName" translate="yes" xml:space="preserve">
+          <source>Morse sender</source>
+          <target state="translated">Morse sender</target>
+        </trans-unit>
+        <trans-unit id="Resx/t2m" translate="yes" xml:space="preserve">
+          <source>Text to Morse</source>
+          <target state="translated">Testo -&gt; Morse</target>
+        </trans-unit>
+        <trans-unit id="Resx/m2t" translate="yes" xml:space="preserve">
+          <source>Morse to Text</source>
+          <target state="translated">Morse -&gt; Testo</target>
+        </trans-unit>
+        <trans-unit id="Resx/AboutTit" translate="yes" xml:space="preserve">
+          <source>About morse sender</source>
+          <target state="translated">Informazioni su Morse sender</target>
+        </trans-unit>
+        <trans-unit id="Resx/AboutText" translate="yes" xml:space="preserve">
+          <source>Translate your text into morse code and back! Note that morse letters are separeted by white spaces ' ' and morse words are separeted by slashes '/'</source>
+          <target state="translated">Traduci i tuoi messaggi in codice morse e viceversa! Ricorda che le lettere morse sono separate da spazi ' ' e le parole morse sono separate da barre '/'</target>
+        </trans-unit>
+        <trans-unit id="Resx/MsgBoxStart" translate="yes" xml:space="preserve">
+          <source>Please note that non standard alphabetical characters will not be translated into morse code</source>
+          <target state="translated" state-qualifier="mt-suggestion">Si noti che i caratteri alfabetici non standard non verranno convertiti in codice morse</target>
+        </trans-unit>
+        <trans-unit id="Resx/TextCode" translate="yes" xml:space="preserve">
+          <source>Your text here</source>
+          <target state="translated">Il tuo messaggio qui</target>
+        </trans-unit>
+        <trans-unit id="Resx/FirstPivot" translate="yes" xml:space="preserve">
+          <source>message</source>
+          <target state="translated">messaggio</target></trans-unit>
+        <trans-unit id="Resx/SecondPivot" translate="yes" xml:space="preserve">
+          <source>translation</source>
+          <target state="translated">traduzione</target></trans-unit>
+        <trans-unit id="Resx/AppMotto" translate="yes" xml:space="preserve">
+          <source>dit dit dah dit - dit dit dah - dah dit</source>
+          <target state="translated">dit dit dah dit - dit dit dah - dah dit</target>
+        </trans-unit>
+        <trans-unit id="Resx/MailSub" translate="yes" xml:space="preserve">
+          <source>Morse message</source>
+          <target state="translated" state-qualifier="mt-suggestion">Messaggio Morse</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayErrTit" translate="yes" xml:space="preserve">
+          <source>Unable to play</source>
+          <target state="translated" state-qualifier="mt-suggestion">Impossibile riprodurre</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayErrTxt" translate="yes" xml:space="preserve">
+          <source>You can only play morse code. Please select 'Text to Morse' mode and try again</source>
+          <target state="translated">È possibile riprodurre solo codice morse. Selezionare la modalità 'Da testo a morse' e riprovare</target>
+        </trans-unit>
+        <trans-unit id="Resx/SentFrom" translate="yes" xml:space="preserve">
+          <source>Sent from Morse sender for Windows Phone</source>
+          <target state="translated">Inviato tramite Morse sender per Windows Phone</target>
+        </trans-unit>
+        <trans-unit id="Resx/ShareText" translate="yes" xml:space="preserve">
+          <source>Share via:</source>
+          <target state="translated">Condividi tramite:</target>
+        </trans-unit>
+        <trans-unit id="Resx/ContactMe" translate="yes" xml:space="preserve">
+          <source>If you have comments or suggestions, please feel free to contact me at the following address:</source>
+          <target state="translated">Se hai commenti o suggerimenti, non esitare a contattarmi al seguente indirizzo:</target>
+        </trans-unit>
+        <trans-unit id="Resx/ThirdParty" translate="yes" xml:space="preserve">
+          <source>This application makes use of Coding4Fun's Controls library</source>
+          <target state="translated">Questa applicazione fa uso della libreria Controlli di Coding4Fun </target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

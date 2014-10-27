@@ -118,54 +118,56 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppName" xml:space="preserve">
-    <value>Morse sender</value>
+    <value>[0AF76][!!_Μòѓŝè śèηďèŗ_!!]</value>
   </data>
   <data name="t2m" xml:space="preserve">
-    <value>Text to Morse</value>
+    <value>[18E2A][!!_Ťéхť тõ Мòŕšé_!!]</value>
   </data>
   <data name="m2t" xml:space="preserve">
-    <value>Morse to Text</value>
+    <value>[18B25][!!_Μòřšé тò Ťêхτ_!!]</value>
   </data>
   <data name="AboutTit" xml:space="preserve">
-    <value>About morse sender</value>
+    <value>[82376][!!_ÁБôûт môřşę şęήđęŗ_!!!!!!]</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>Translate your text into morse code and back! Note that morse letters are separeted by white spaces ' ' and morse words are separeted by slashes '/'</value>
+    <value>[A4599][!!_Ťřáиšłáτè ŷôûŕ τé×ť îητó мòŗŝę čõðè ãиð Бáċќ! Ńõţê ţнáţ móŕśé łęττêřś áѓé şêρãřêţêđ ъУ ẃнìţê şþãčèŝ ' ' áηð mõřşé ŵóŗðş âŗę šęρáѓęťêð ьý ŝļâŝђéś '/'_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
   </data>
   <data name="MsgBoxStart" xml:space="preserve">
-    <value>Please note that non standard alphabetical characters will not be translated into morse code</value>
+    <value>[01D07][!!_Þĺéâŝè иõτé ťнâт ήòи śτâήðãѓď ãľρнâвęťíćáł ĉћàŕãčţêŗś ẅíļł иõť Бé ťřâйŝłâτêð ìηтó мõřŝê ĉóðé_!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
   </data>
   <data name="TextCode" xml:space="preserve">
-    <value>Your text here</value>
+    <value>[6A0AC][!!_Ỳõùř τę×ť ħèŗè_!!!!]</value>
   </data>
   <data name="FirstPivot" xml:space="preserve">
-    <value>message</value>
+    <value>[A83F1][!!_îηрµţ_!!]</value>
+    <comment></comment>
   </data>
   <data name="SecondPivot" xml:space="preserve">
-    <value>translation</value>
+    <value>[AF611][!!_óúţþùť_!!]</value>
+    <comment></comment>
   </data>
   <data name="AppMotto" xml:space="preserve">
-    <value>dit dit dah dit - dit dit dah - dah dit</value>
+    <value>[F53F8][!!_ðįτ đįτ đáĥ đîţ - ďíт ďìτ ďàħ - ďãħ ðįţ_!!!!!!!!!!!!]</value>
   </data>
   <data name="MailSub" xml:space="preserve">
-    <value>Morse message</value>
+    <value>[1F897][!!_Мôŕšę mêşşàğê_!!]</value>
   </data>
   <data name="PlayErrTit" xml:space="preserve">
-    <value>Unable to play</value>
+    <value>[E707D][!!_Ûήàвĺé тô рļáÿ_!!!!]</value>
   </data>
   <data name="PlayErrTxt" xml:space="preserve">
-    <value>You can only play morse code. Please select 'Text to Morse' mode and try again</value>
+    <value>[42CFD][!!_Ỳòù ċâй óйľў ρłãУ мôŗŝè ćòđę. Þĺèâśè ŝéľêĉť 'Ţèхţ τõ Мõřşę' móđè âйď тřУ ãĝáíи_!!!!!!!!!!!!!!!!!!!!!!!!]</value>
   </data>
   <data name="SentFrom" xml:space="preserve">
-    <value>Sent from Morse sender for Windows Phone</value>
+    <value>[10F0E][!!_Şéήť ƒŗõм Μóŕšé şéηđèř ƒõř Ŵìήđóŵš Рнôиę_!!!!!!!!!!!!]</value>
   </data>
   <data name="ShareText" xml:space="preserve">
-    <value>Share via:</value>
-  </data>
-  <data name="ContactMe" xml:space="preserve">
-    <value>If you have comments or suggestions, please feel free to contact me at the following address:</value>
+    <value>[624EF][!!_Ŝђâŗę νíâ:_!!]</value>
   </data>
   <data name="ThirdParty" xml:space="preserve">
-    <value>This application makes use of Coding4Fun's Controls library</value>
+    <value>[A3751][!!_Тĥìŝ âррľíĉãţîòй мàќęş ùšé ôƒ Ĉõďîηĝ4₣ùи'ŝ Ċôηťŕõłş ľįьѓáŗў_!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="ContactMe" xml:space="preserve">
+    <value>[E7DD2][!!_Ìƒ ÿóµ ĥâνé čòmmèήτş õѓ šµğğęşτîóиş, рļéâšé ƒééĺ ƒŕéè ťô ćòиτãċт мé áţ ťħę ƒóĺĺòẃįηġ âđðŕéśŝ:_!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
   </data>
 </root>

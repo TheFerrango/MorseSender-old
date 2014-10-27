@@ -14,13 +14,15 @@ using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using System.Threading;
+using System.Windows.Controls.Primitives;
+using Coding4Fun.Toolkit.Controls;
+using Morse_sender.Langs;
 
 namespace Morse_sender
 {
   public partial class MainPage : PhoneApplicationPage
   {
-
-    SoundEffect dot, dash, longp, shortp;
+    SoundEffect dot, dash, shortp;
 
     string tmpMorse;
 
@@ -32,20 +34,24 @@ namespace Morse_sender
     {
       InitializeComponent();
       loaded = false;
+      
     }
 
     private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
     {
       if (!loaded)
       {
-        MessageBox.Show(Langs.AppResources.MsgBoxStart);
+        if (!App.HasBeenStarted)
+        {
+          MessageBox.Show(Langs.AppResources.MsgBoxStart);
+          App.HasBeenStarted = true;
+        }
         toMorse = true;
         radioT2m.IsChecked = true;
         txtToMorsefy_TextChanged(null, null);
 
         dot = SoundEffect.FromStream(TitleContainer.OpenStream("Sound/dot.wav"));
         dash = SoundEffect.FromStream(TitleContainer.OpenStream("Sound/dash.wav"));
-        //longp = SoundEffect.FromStream(TitleContainer.OpenStream("Sound/lgpause.wav"));
         shortp = SoundEffect.FromStream(TitleContainer.OpenStream("Sound/smpause.wav"));
         FrameworkDispatcher.Update();
 
@@ -65,20 +71,7 @@ namespace Morse_sender
       sct.Show();
     }
 
-    private void sndMail_Click(object sender, EventArgs e)
-    {
-      EmailComposeTask ect = new EmailComposeTask();
-      ect.Body = lblMorsed.Text;
-      ect.Show();
-    }
-
-    private void postShare_Click(object sender, EventArgs e)
-    {
-      ShareStatusTask sst = new ShareStatusTask();
-      sst.Status = lblMorsed.Text;
-      sst.Show();
-    }
-
+   
     private void saveClip_Click(object sender, EventArgs e)
     {
       Clipboard.SetText(lblMorsed.Text);
@@ -94,12 +87,7 @@ namespace Morse_sender
       toMorse = radioT2m.IsChecked == true ? true : false;
       txtToMorsefy_TextChanged(null, null);
     }
-
-    private void settBtn_Click(object sender, EventArgs e)
-    {
-
-    }
-
+    
     private void aboBtn_Click(object sender, EventArgs e)
     {
       NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
@@ -107,45 +95,52 @@ namespace Morse_sender
 
     private void playBtn_Click(object sender, EventArgs e)
     {
-      if (!isPlaying)
+      if (radioT2m.IsChecked == true)
       {
-        isPlaying = true;
-        tmpMorse = lblMorsed.Text;
-        Thread t = new Thread(StartPlaying);
-        t.Start();
+        if (!isPlaying)
+        {
+          isPlaying = true;
+          tmpMorse = lblMorsed.Text;
+          Thread t = new Thread(StartPlaying);
+          t.Start();
+        }
       }
+      else
+        MessageBox.Show(AppResources.PlayErrTxt, AppResources.PlayErrTit, MessageBoxButton.OK);
     }
 
     private void StartPlaying()
     {   
         foreach (char ch in tmpMorse)
-        {
-          riproduci(ch);
-
-        }
+          riproduci(ch);              
         isPlaying = false;
-     
     }
 
     public void PlaySound(SoundEffect effect)
     {
       effect.Play();
-        Thread.Sleep(effect.Duration);
-      
+      Thread.Sleep(effect.Duration);      
     }
 
     private void riproduci(char ch)
     {
-
       switch (ch)
       {
         case '.': PlaySound(dot); break;
         case '-': PlaySound(dash); break;
         case ' ': PlaySound(shortp); break;
-        //case '/': PlaySound(longp); break;
         default: break;
       }
-
     }
+
+    private void shareBtn_Click(object sender, EventArgs e)
+    {
+      MessagePrompt mp = new MessagePrompt();
+      mp.ActionPopUpButtons.Clear();
+      mp.Body = new ShareControl(lblMorsed.Text);
+      mp.VerticalAlignment = System.Windows.VerticalAlignment.Bottom;
+      mp.Show();
+    }
+
   }
 }

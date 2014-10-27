@@ -97,7 +97,16 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input.
+        ///   Looks up a localized string similar to If you have comments or suggestions, please feel free to contact me at the following address:.
+        /// </summary>
+        public static string ContactMe {
+            get {
+                return ResourceManager.GetString("ContactMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to message.
         /// </summary>
         public static string FirstPivot {
             get {
@@ -115,20 +124,11 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to mail morse.
+        ///   Looks up a localized string similar to Morse message.
         /// </summary>
-        public static string MailMorse {
+        public static string MailSub {
             get {
-                return ResourceManager.GetString("MailMorse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to -.-- --- ..- .-. / -- --- .-. ... . / .... . .-. ..
-        /// </summary>
-        public static string MorseCode {
-            get {
-                return ResourceManager.GetString("MorseCode", resourceCulture);
+                return ResourceManager.GetString("MailSub", resourceCulture);
             }
         }
         
@@ -142,7 +142,25 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to output.
+        ///   Looks up a localized string similar to Unable to play.
+        /// </summary>
+        public static string PlayErrTit {
+            get {
+                return ResourceManager.GetString("PlayErrTit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can only play morse code. Please select &apos;Text to Morse&apos; mode and try again.
+        /// </summary>
+        public static string PlayErrTxt {
+            get {
+                return ResourceManager.GetString("PlayErrTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to translation.
         /// </summary>
         public static string SecondPivot {
             get {
@@ -151,11 +169,20 @@ namespace Morse_sender.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to text morse.
+        ///   Looks up a localized string similar to Sent from Morse sender for Windows Phone.
         /// </summary>
-        public static string SmsMorse {
+        public static string SentFrom {
             get {
-                return ResourceManager.GetString("SmsMorse", resourceCulture);
+                return ResourceManager.GetString("SentFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share via:.
+        /// </summary>
+        public static string ShareText {
+            get {
+                return ResourceManager.GetString("ShareText", resourceCulture);
             }
         }
         
@@ -174,6 +201,15 @@ namespace Morse_sender.Langs {
         public static string TextCode {
             get {
                 return ResourceManager.GetString("TextCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This application makes use of Coding4Fun&apos;s Controls library.
+        /// </summary>
+        public static string ThirdParty {
+            get {
+                return ResourceManager.GetString("ThirdParty", resourceCulture);
             }
         }
     }
