@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Lorenzo\Documents\Visual Studio 2015\Projects\Morse Sender\Morse Sender\bin\x86\Release\Morse Sender_1.1.0.0_x86.appx
+SymbolPackage=C:\Users\Lorenzo\Documents\Visual Studio 2015\Projects\Morse Sender\Morse Sender\AppPackages\Morse Sender_1.1.0.0_Test\Morse Sender_1.1.0.0_x86.appxsym
